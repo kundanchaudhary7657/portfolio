@@ -1,0 +1,276 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(5, 4, 4);
+    margin-top: 0px;
+}
+
+h3{
+    color: #0dfeee;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 30px;
+   text-shadow: 0 0 35px ;
+   z-index: 1;
+   
+}
+
+
+
+
+.header{
+   position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+   margin-top: auto;
+   padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    background-color: #031815;
+   
+}
+
+.navbar a{
+   margin-left: 35px;
+    text-decoration: none;
+    color: white;
+    transition: color 0s;
+}
+
+.navbar a:hover{
+   color:#59CE8F;
+    background-color: transparent;
+}
+
+.navbar a.active{
+    color:#59CE8F
+}
+
+h1{
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    line-height: 1.2;
+   cursor: pointer;
+}
+
+
+.home-content h3{
+    color: #0dfeee;
+    font-size: 30px;
+    font-weight: 700;
+    display: inline-flex;
+}
+
+.hero{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    max-width: 800px;
+    flex-wrap: wrap;
+}
+.home-content p{
+    margin: 20px 0 40px;
+    font-family: 15px;
+    font-weight: 700;
+color: white;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.home-content .btn-box{
+    display: flex;
+    justify-content: space-around;
+    background: transparent;
+    height: 30px;
+    width: 300px;
+    padding-right: 65px;
+    flex-wrap: wrap;
+
+}
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items:center ;
+    width: 100px;
+    height: 100%;
+    background: #0dfeee;
+    border: 2px solid #0dfeee;
+    border-radius: 8px;
+    font-size: large;
+    color: rgb(2, 0, 3);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+
+}
+
+.btn-box a:nth-child(2){
+    background: transparent;
+    color:#0dfeee;
+}
+
+.btn-box a::before{
+    content:"";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: 0;
+   top: 0;
+    background:rgb(5, 4, 4) ;
+   
+    z-index: -1;
+    transition: 1s;
+
+
+}
+
+.btn-box a:hover::before{
+    width: 100%;
+    color:#0dfeee
+}
+
+.btn-box a:nth-child(2)::before{
+    background: #0dfeee;
+}
+
+.btn-box a:nth-child(2):hover{
+    color: black;
+}
+
+.btn-box a:nth-child(1):hover{
+    color: #0dfeee;
+}
+
+.image1 img{
+    height: 400px;
+    position: relative;
+    top: 20%;
+    right: 30%;
+   border: 8px solid #0dfeee;
+   border-radius: 50%;
+   box-shadow: 0 0 50px 1px #0dfeee;
+   z-index: -1;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.logo{
+    position: absolute;
+   
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.logo a{ 
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #0dfeee;
+    background: transparent;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: medium;
+    color: #0dfeee;
+   justify-content: center;
+   align-items: center;
+   animation-duration: 1.5s;
+   animation-iteration-count: infinite;
+   flex-wrap: wrap;
+  
+  
+
+}
+
+
+.logo a:hover{
+    animation-name: logo1;
+    animation-timing-function: ease;
+    color: #59CE8F;
+    border: #0dfeee;
+   
+}
+
+@keyframes logo1{
+    0%{
+        transform: rotate(0) scale(1.5);
+    }
+    50%{
+        transform: rotate(360deg) scale(1.5);
+    }
+    100%{
+        transform: rotate(360deg) scale(1.5);
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .image1 img{
+        position: relative;
+        bottom: 80vh;
+        height: 200px;
+        margin-left: 60%;
+        padding: 0;
+        margin-bottom: 0;
+
+    }
+    }
+
+    @media only screen and (max-width:600px) {
+        h1{
+            font-size: 30px;
+            padding-top: 0%;
+            margin-top: 0%;
+           
+        }
+        h3{
+            margin-bottom: 30px;
+        }
+    }
+
+    @media only screen and (max-width:600px) {
+        .logo{
+          display: flex;
+          align-items: end;
+          flex-direction:row;
+        padding-right: 10px;
+         padding-top: 590px;
+
+        }
+        .logo a{
+            margin-left: 50px;
+        }
+        }
+
+        @media only screen and (max-width:600px){
+            .home-content{
+                position: relative;
+                top: 25vh;
+            }
+        }
+
+        
